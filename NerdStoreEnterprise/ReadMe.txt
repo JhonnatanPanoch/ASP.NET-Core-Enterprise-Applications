@@ -6,3 +6,5 @@ Montar estrutura
 	- Para adicionar as migrations instalar o pacote Microsoft.EntityFrameworkCore.Tools
 	- Criar migrations: add-migration Initil
 	- Ciar banco de dados: update-database
+	- [ApiController] define um controler como controller de api
+
