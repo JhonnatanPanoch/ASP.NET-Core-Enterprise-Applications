@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using NSE.Identidade.API.Data;
+using NSE.Identidade.API.Extensions;
 
 namespace NSE.Identidade.API
 {
@@ -34,10 +35,7 @@ namespace NSE.Identidade.API
                 .AddDefaultTokenProviders();
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "NSE.Identidade.API", Version = "v1" });
-            });
+            services.AddSwaggerConfiguration();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -45,10 +43,9 @@ namespace NSE.Identidade.API
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "NSE.Identidade.API v1"));
             }
 
+            app.UseSwaggerConfiguration();
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
