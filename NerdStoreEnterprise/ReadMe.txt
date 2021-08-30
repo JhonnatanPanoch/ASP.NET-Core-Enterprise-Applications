@@ -14,5 +14,32 @@ Autenticação:
 
 Ambientes:
 	- Para pegar o appsettings conforme o ambiente, usar o ConfigurationBuilder() no construtor do startup.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	    public static IServiceCollection AddConfiguration(this IServiceCollection services)
+        {
+            
+            return services;
+        }
+
+        public static IApplicationBuilder UseConfiguration(this IApplicationBuilder app)
+        {
+
+            return app;
+        }
 	
 
