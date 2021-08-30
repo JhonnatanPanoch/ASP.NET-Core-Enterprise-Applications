@@ -8,3 +8,7 @@ Montar estrutura
 	- Ciar banco de dados: update-database
 	- [ApiController] define um controler como controller de api
 
+Autenticação:
+	- Uma claim é um papel. 
+	- Uma role é um dado aberto. Permissao, Dados do usuario, etc.
+
