@@ -12,3 +12,7 @@ Autenticação:
 	- Uma claim é um papel. 
 	- Uma role é um dado aberto. Permissao, Dados do usuario, etc.
 
+Ambientes:
+	- Para pegar o appsettings conforme o ambiente, usar o ConfigurationBuilder() no construtor do startup.
+	
+
